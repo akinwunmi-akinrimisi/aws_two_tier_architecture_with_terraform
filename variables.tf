@@ -3,6 +3,12 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
+variable "ami_id" {
+  description = "ami id for Amazon Linux 2"
+  type        = string
+  default     = "ami-090e0fc566929d98b"
+}
+
 variable "vpc_name" {
   description = "Name for Custom VPC"
   type        = string

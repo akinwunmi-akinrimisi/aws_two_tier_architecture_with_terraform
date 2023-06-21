@@ -1,8 +1,3 @@
-data "aws_ssm_parameter" "instance_ami" {
-  name = "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
-}
-
-
 #create a custom VPC
 resource "aws_vpc" "project_vpc" {
   cidr_block = var.vpc_cidr
@@ -316,7 +311,7 @@ resource "aws_lb_target_group" "project-launch-template" {
 #create EC2 instance launch template for auto scaling group
 resource "aws_launch_template" "project-webserver" {
   name                   = "project-lt"
-  image_id               = data.aws_ssm_parameter.instance_ami.value
+  image_id               = var.ami_id
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.project-webserver-sg.id]
 
