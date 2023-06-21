@@ -51,10 +51,3 @@ variable "vpc_security_group_ids" {
   default = "security_group_ids"
 }
 
-variable "access_key" {
-  default = "AKIAUUPP6XST2VZRBAOW"
-}
-
-variable "secret_access_key" {
-  default = "2bjQ8tAgd9FMLaWMzoT9mkFI5Ua3uA+shF3DK8DQ"
-}
