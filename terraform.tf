@@ -1,9 +1,9 @@
 terraform {
   cloud {
-    organization = "Terraform-Deployment"
+    organization = "akinwunmi_akinrimisi"
 
     workspaces {
-      name = "terraform_two_tier_arch"
+      name = "aws_two_tier_architecture_with_terraform"
     }
   }
 }
